@@ -16,7 +16,7 @@ export type Outlet = {
 export type MenuItem = {
   id: string;
   name: string;
-  category: 'Burgers' | 'Sides' | 'Drinks' | 'Desserts';
+  category: 'Burgers' | 'Quick Bites' | 'Momos' | 'Fries' | 'Fried Rice' | 'Noodles' | 'Pizza' | 'Wraps' | 'Mocktails' | 'Shakes' | 'Beverages' | 'Desserts';
   description: string;
   price: number;
   image: string;
@@ -49,9 +49,9 @@ export type Order = {
 export const outlets: Outlet[] = [
   {
     id: 'outlet-1',
-    name: 'Hearth & Press — Downtown',
-    shortName: 'Downtown',
-    address: '19 Church Street, Fort Kochi',
+    name: 'MH99 Burgers — Malad East',
+    shortName: 'Malad East',
+    address: '19 Church Street, Malad East',
     hours: '11:30 AM — 11:00 PM',
     status: 'Open',
     tables: 22,
@@ -59,9 +59,9 @@ export const outlets: Outlet[] = [
   },
   {
     id: 'outlet-2',
-    name: 'Hearth & Press — Central',
-    shortName: 'Central',
-    address: '48 MG Road, Ernakulam',
+    name: 'MH99 Burgers — Andheri West',
+    shortName: 'Andheri West',
+    address: '48 Link Road, Andheri West',
     hours: '11:30 AM — 11:30 PM',
     status: 'Busy',
     tables: 34,
@@ -69,9 +69,9 @@ export const outlets: Outlet[] = [
   },
   {
     id: 'outlet-3',
-    name: 'Hearth & Press — Westside',
-    shortName: 'Westside',
-    address: '2A Riverside Walk, Edappally',
+    name: 'MH99 Burgers — Powai',
+    shortName: 'Powai',
+    address: '2A Lake Boulevard, Powai',
     hours: '12:00 PM — 10:30 PM',
     status: 'Open',
     tables: 28,
@@ -123,7 +123,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'loaded-fries',
     name: 'Loaded Fries',
-    category: 'Sides',
+    category: 'Fries',
     description: 'Golden fries, cheese sauce, smoked brisket crumbs, scallions.',
     price: 179,
     image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85',
@@ -133,7 +133,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'dirty-fries',
     name: 'Dirty Fries',
-    category: 'Sides',
+    category: 'Fries',
     description: 'Crispy fries tossed in house spice, garlic aioli and chives.',
     price: 149,
     image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=900&q=85',
@@ -142,7 +142,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'corn-ribs',
     name: 'Charred Corn Ribs',
-    category: 'Sides',
+    category: 'Quick Bites',
     description: 'Sweet corn, lime butter, chilli salt and toasted sesame.',
     price: 159,
     image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=900&q=85',
@@ -151,7 +151,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'cold-coffee',
     name: 'Cold Coffee',
-    category: 'Drinks',
+    category: 'Beverages',
     description: 'Slow-steeped coffee, vanilla cream and a dark cocoa finish.',
     price: 159,
     image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=85',
@@ -161,7 +161,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'orange-soda',
     name: 'Blood Orange Soda',
-    category: 'Drinks',
+    category: 'Mocktails',
     description: 'Bright citrus, bitter orange and a little fizz over ice.',
     price: 129,
     image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=85',
@@ -170,7 +170,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'black-tea',
     name: 'Black Tea Highball',
-    category: 'Drinks',
+    category: 'Beverages',
     description: 'Cold-brewed Nilgiri tea, lemon peel and sparkling tonic.',
     price: 139,
     image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=85',
@@ -202,6 +202,61 @@ export const menuItems: MenuItem[] = [
     description: 'Buttery shortcrust, caramel custard and whipped mascarpone.',
     price: 199,
     image: 'https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=900&q=85',
+    enabled: true,
+  },
+  {
+    id: 'spicy-momos',
+    name: 'Tandoori Momos',
+    category: 'Momos',
+    description: 'Smoky paneer momos, mint chutney and a bright chilli glaze.',
+    price: 189,
+    image: 'https://images.unsplash.com/photo-1625398407796-82650a8c135f?auto=format&fit=crop&w=900&q=85',
+    enabled: true,
+    tag: 'Crowd pick',
+  },
+  {
+    id: 'schezwan-rice',
+    name: 'Schezwan Fried Rice',
+    category: 'Fried Rice',
+    description: 'Wok-tossed rice, charred vegetables, spring onion and house schezwan.',
+    price: 229,
+    image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85',
+    enabled: true,
+  },
+  {
+    id: 'chilli-noodles',
+    name: 'Chilli Garlic Noodles',
+    category: 'Noodles',
+    description: 'Slippery noodles, wok hei, garlic crisp and sesame greens.',
+    price: 219,
+    image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=85',
+    enabled: true,
+  },
+  {
+    id: 'pepper-pizza',
+    name: 'Pepper Paneer Pizza',
+    category: 'Pizza',
+    description: 'Charred crust, pepper paneer, mozzarella and smoked tomato sauce.',
+    price: 329,
+    image: 'https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85',
+    enabled: true,
+  },
+  {
+    id: 'crispy-wrap',
+    name: 'Crispy Chicken Wrap',
+    category: 'Wraps',
+    description: 'Crunchy chicken, lettuce, pickled onions and chipotle mayo.',
+    price: 249,
+    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=900&q=85',
+    enabled: true,
+  },
+  {
+    id: 'mango-shake',
+    name: 'Mango Cream Shake',
+    category: 'Shakes',
+    description: 'Alphonso mango, vanilla cream and a little cardamom.',
+    price: 199,
+    image: 'https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=900&q=85',
     enabled: true,
   },
 ];
@@ -275,7 +330,7 @@ export const seedOrders: Order[] = [
   },
 ];
 
-export const categories: MenuItem['category'][] = ['Burgers', 'Sides', 'Drinks', 'Desserts'];
+export const categories: MenuItem['category'][] = ['Burgers', 'Quick Bites', 'Momos', 'Fries', 'Fried Rice', 'Noodles', 'Pizza', 'Wraps', 'Mocktails', 'Shakes', 'Beverages', 'Desserts'];
 
 export const statusSteps: OrderStatus[] = ['NEW', 'ACCEPTED', 'PREPARING', 'READY', 'COMPLETED'];
 
